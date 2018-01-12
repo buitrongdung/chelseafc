@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<definitions targetNamespace="http://localhost/chelsea.wsdl"
+ xmlns:tns="http://localhost/chelsea.wsdl"
+ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:chel="http://tempuri.org/chelsea.xsd"
+ xmlns:SOAP="http://schemas.xmlsoap.org/wsdl/soap/"
+ xmlns:MIME="http://schemas.xmlsoap.org/wsdl/mime/"
+ xmlns:DIME="http://schemas.xmlsoap.org/ws/2002/04/dime/wsdl/"
+ xmlns:WSDL="http://schemas.xmlsoap.org/wsdl/"
+ xmlns="http://schemas.xmlsoap.org/wsdl/"
+>
+<types>
+<schema targetNamespace="Chelseafc"
+xmlns="http://www.w3.org/2001/XMLSchema"
+xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+xmlns:chel="http://tempuri.org/chelsea.xsd"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+elementFormDefault="qualified"
+attributeFormDefault="qualified">
+    <import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+    <complexType name="clsTypeResult">
+        <sequence>
+            <element name="Code" type="xsd:int" minOccurs="1" maxOccurs="1" nillable="false"/>
+            <element name="Message" type="xsd:string" minOccurs="1" maxOccurs="1" nillable="false"/>
+        </sequence>
+    </complexType>
+    <complexType name="clsAccessType">
+        <sequence>
+            <element name="UserName" type="xsd:string" minOccurs="1" maxOccurs="1" nillable="false"/>
+            <element name="Password" type="xsd:string" minOccurs="1" maxOccurs="1" nillable="false"/>
+        </sequence>
+    </complexType>
+    <complexType name="clsItem">
+        <sequence>
+            <element name="Id" type="xsd:int" minOccurs="1" maxOccurs="1" nillable="false"/>
+            <element name="Name" type="xsd:string" minOccurs="1" maxOccurs="1" nillable="false"/>
+        </sequence>
+    </complexType>
+    <complexType name="clsProductsList">
+        <sequence>
+            <element name="Id" type="xsd:int" minOccurs="1" maxOccurs="1" nillable="false"/>
+            <element name="Name" type="xsd:string" minOccurs="1" maxOccurs="1" nillable="false"/>
+            <element name="Description" type="xsd:string" minOccurs="1" maxOccurs="1" nillable="false"/>
+            <element name="Size" type="xsd:string" minOccurs="1" maxOccurs="1" nillable="false"/>
+            <element name="Price" type="xsd:float" minOccurs="1" maxOccurs="1" nillable="false"/>
+        </sequence>
+    </complexType>
+
+    <!--operation require element-->
+    <element name="clsGetProductListRQ">
+        <complexType>
+            <sequence>
+                <element name="Access" type="chel:clsAccessType" minOccurs="0" maxOccurs="1" nillable="false"/>
+            </sequence>
+        </complexType>
+    </element>
+    <!-- operation response element -->
+    <element name="clsGetProductListRS">
+        <complexType>
+            <sequence>
+                <element name="OpResult" type="chel:clsTypeResult" minOccurs="0" maxOccurs="1" nillable="false"/>
+                <element name="ProductList" type="chel:clsProductsList" minOccurs="0" maxOccurs="unbounded" nillable="false"/>
+            </sequence>
+        </complexType>
+    </element>
+</schema>
+</types>
+
+<message name="getProductListRequest">
+    <part name="params" element="chel:clsGetProductListRQ" />
+</message>
+<message name="getProductListResponse">
+    <part name="params" element="chel:clsGetProductListRS" />
+</message>
+
+<portType name="ServicePortType">
+    <operation name="getProductList">
+        <documentation>Retrieve product list</documentation>
+        <input message="tns:getProductListRequest"></input>
+        <output message="tns:getProductListResponse"></output>
+    </operation>
+</portType>
+
+<binding name="ChelBinding" type="tns:ServicePortType">
+    <SOAP:binding style="document" ransport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getProductList">
+        <SOAP:operation soapAction="" style="document"/>
+        <input>
+            <SOAP:body use="literal" />
+        </input>
+        <output>
+            <SOAP:body use="literal" />
+        </output>
+    </operation>
+</binding>
+
+<service name="ChelseaFcService">
+    <documentation>ChelseaFc</documentation>
+    <port name="ChelseaFc" binding="tns:ChelBinding">
+        <SOAP:address location="{LOCATION}"/>
+    </port>
+</service>
+</definitions>

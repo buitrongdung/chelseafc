@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+    <menu id="bk" title="Bookings" role="uap,bas">
+        <menu id="bas" url="/bas/" title="BAS" role="uap,bas"/>
+        <menu id="search" url="/bas/?cmd=search_bk" title="Search bookings" role="uap,bas"/>
+        <menu id="search_corr" url="/bas/?cmd=search_corr" title="Search Corr" role="uap,bas"/>
+        <menu id="new" url="/bas/?cmd=booking" title="New booking" role="uap,bas"/>
+        <menu id="gift" url="/bas/?cmd=giftcert" title="Gift certificate" role="uap,bas"/>
+    </menu>
+    <menu id="site" title="Site Content" role="uap">
+        <menu id="portal" url="" title="Portal Pages" role="uap,sitecms">
+            <menu id="portal_home" url="" title="HomePage Setting" role="uap,sitecms" />
+            <menu id="portal_events" url="" title="Local Events" role="uap,sitecms" />
+            <menu id="portal_stories" url="" title="Local Stories" role="uap,sitecms" />
+            <menu id="portal_know" url="" title="Did you know?" role="uap,sitecms" />
+            <menu id="portal_other" url="" title="Other Pages" role="uap,sitecms" />
+            <menu id="portal_extra" url="" title="Extra Pages" role="uap,sitecms" />
+        </menu>
+        <menu id="uap_inf" url="" title="UAP Info" role="uap,uap_info"/>
+    </menu>
+    <menu id="svc" title="Service Setup" role="uap">
+        <menu id="tour" url="/tour_cms/" title="Tours" role="uap,tourcms"/>
+        <menu id="schedule" url="/tour_cms/?cmd=tour_schedule" title="Schedule" role="uap,uap_tour_mngt"/>
+        <menu id="guide" url="/tour_cms/?cmd=guide_list" title="Tour guides" role="uap,uap_tour_mngt"/>
+        <menu id="specialoffer" url="/tour_cms/?cmd=so_list" title="Special Offers" role="uap,uap_tour_mngt" />
+        <menu id="supplier" url="/tour_cms/?cmd=supplier_list" title="Suppliers" role="uap,uap_tour_mngt"/>
+    </menu>
+    <menu id="rp_uap" title="UAP Reports" role="uap,uap_report">
+        <menu id="rp_agent" title="Agent Reports" role="uap,uap_report">
+            <menu id="rp_sale"          url="/reports/?cmd=agent_sale"            title="Agent sale - Booking"/>
+            <menu id="rp_sale_trip"     url="/reports/?cmd=agent_sale_trip"       title="Agent sale - Trip"/>
+            <menu id="rp_forward"       url="/reports/?cmd=agent_forward"         title="Agent Forward - Booking"/>
+            <menu id="rp_forward_tour"  url="/reports/?cmd=agent_forward_trip"    title="Agent Forward - Trip"/>
+            <menu id="rp_on_statement"  url="/reports/?cmd=agent_booking"         titl="Agent booking - On statement"/>
+            <menu id="rp_booking_date"  url="/reports/?cmd=agent_booking_date"    title="Agent report - Booking date"/>
+        </menu>
+        <menu id="rp_affiliate" title="Affiliate Reports" role="uap,uap_report">
+            <menu id="rp_aff_sale"          url="/reports/?cmd=aff_sale"            title="Affiliate sale - Booking"/>
+            <menu id="rp_aff_sale_trip"     url="/reports/?cmd=aff_sale_trip"       title="Affiliate sale - Trip"/>
+            <menu id="rp_aff_forward"       url="/reports/?cmd=aff_forward"         title="Affiliate Forward - Booking"/>
+            <menu id="rp_aff_forward_trip"  url="/reports/?cmd=aff_forward_trip"    title="Affiliate Forward - Trip"/>
+            <menu id="rp_aff_comm_sum"  	url="/reports/?cmd=aff_comm_sum"    	title="Affiliate Commission (Summary)"/>
+            <menu id="rp_aff_booking_date"  url="/reports/?cmd=aff_booking_date"    title="Affiliate Report - Booking Date"/>
+        </menu>
+        <menu id="rp_sale" title="Sale Reports" role="uap,uap_report">
+            <menu id="sale_booking" url="/reports/?cmd=sale_booking"    title="Sale - Booking" />
+            <menu id="sale_trip"    url="/reports/?cmd=sale"            title="Sale - Trip"  />
+            <menu id="sale_master"  url="/reports/?cmd=sale_ualbooking" title="Sale - Master"  />
+        </menu>
+        <menu id="rp_forward" title="Forward Reports" role="uap,uap_report">
+            <menu id="forward_booking"    url="/reports/?cmd=uaforward"             title="Forward - Booking" />
+            <menu id="forward_tour"       url="/reports/?cmd=forward_tour"          title="Forward - Trip" />
+            <menu id="forward_ualbooking" url="/reports/?cmd=forward_ualbooking"    title="Forward - Master" />
+        </menu>
+        <menu id="rp_accounting" title="Accounting Reports" role="uap,uap_report">
+            <menu id="accounting_navision"    url="/reports/?cmd=accounting_navision"   title="Navision Transaction Log" />
+            <menu id="accounting_uap"         url="/reports/?cmd=accounting_uap"        title="UAP Report" />
+            <menu id="accounting_uap_myob"    url="/reports/?cmd=accounting_uap_myob"   title="UAP - MYOB Report"/>
+            <menu id="payment_uap"            url="/reports/?cmd=payment_uap"           title="Payment Amount Report" />
+            <menu id="payment_uap_myob"       url="/reports/?cmd=payment_uap_myob"      title="Payment Amount - MYOB Report" />
+            <menu id="accounting_sale_agent_2" url="/reports/?cmd=sale_agent_2"   title="Agent Report" />
+            <menu id="accounting_sale_agent_myob_2" url="/reports/?cmd=sale_agent_myob_2"   title="Agent - MYOB Report" />
+            <menu id="accounting_sale_aff" url="/reports/?cmd=sale_aff"   title="Affiliate Report" />
+            <menu id="accounting_sale_aff_myob" url="/reports/?cmd=sale_aff_myob"   title="Affiliate - MYOB Report" />
+        </menu>
+        <menu id="ualAgentSales" url="/reports/?cmd=ual_agent_sales" title="UAL Agent Sales Report" role="ual,ual_report" />
+        <menu id="stopsale" url="/reports/?cmd=stopsale" title="Stop Sale report" role="uap,uap_report" />
+        <menu id="product" url="/reports/?cmd=product"   title="Product report"   role="uap,uap_report" />
+        <menu id="booking" url="/reports/?cmd=booking"   title="Booking report"   role="uap,uap_report" />
+        <menu id="email_contact" url="/reports/?cmd=email_contact" title="UAP Email Contact" role="uap,uap_report" />
+        <menu id="pre-trip" url="/reports/?cmd=pre-trip" title="Pre-trip report"  role="uap,uap_report" />
+        <menu id="trip-inf" url="/reports/?cmd=trip-inf" title="Trip information report"  role="uap,uap_report" />
+        <menu id="promocode" url="/reports/?cmd=promocode" title="Promo code report" role="uap,uap_report" />
+        <menu id="payment" url="/reports/?cmd=payment" title="Payment report" role="uap,uap_report" />
+        <menu id="operation" url="/reports/?cmd=operations" title="Operations report" role="uap,uap_report" />
+        <menu id="RR_Report" url="/reports/?cmd=RR_Report" title="R&amp;R report" role="uap,uap_report" />
+        <menu id="demographic" url="/reports/?cmd=demographic"   title="Demographic report"   role="uap,uap_report" />
+        <menu id="traveller" url="/reports/?cmd=pax_booking_report" title="Pax booking report" role="uap,uap_report" />
+        <menu id="referral" url="/reports/?cmd=referral" title="Referral report" role="ual" />
+    </menu>
+    <menu id="data_exp" title="MYOB Data Export" role="ual,ual_paypal">
+        <menu id="ual_paypal11" url="/data_export/update_currency.php" title="Update Currency" role="ual,ual_paypal" />
+        <menu id="ual_paypal" url="/data_export/?cmd=ual_paypal" title="Sales through UAL PayPal" role="ual,ual_paypal" />
+        <menu id="ual_paypal2" url="/data_export/?cmd=ual_service_fee" title="Marketing Contribution Fee" role="ual,ual_paypal" />
+        <menu id="ual_paypal3" url="/data_export/?cmd=ual_sales_by_agent" title="Sales By Agents" role="ual,ual_paypal" />
+        <menu id="ual_paypal4" url="/data_export/?cmd=sale_by_uap" title="Sale By UAPs" role="ual,ual_paypal" />
+        <menu id="ual_paypal5" url="/data_export/?cmd=payment_gateway_fee" title="Payment Gateway Fee" role="ual,ual_paypal" />
+        <menu id="ual_paypal6" url="/data_export/?cmd=uap_net_price" title="UAP Net Price" role="ual,ual_paypal" />
+        <menu id="ual_paypal7" url="/data_export/?cmd=uap_commission" title="UAP Commission" role="ual,ual_paypal" />
+        <menu id="ual_paypal8" url="/data_export/?cmd=tour_distribution_cost" title="Tour Distribution Cost" role="ual,ual_paypal" />
+
+    </menu>
+    <menu id="tool" title="UAL Tools" role="ual">
+        <menu id="cms_appr" url="/approval/" title="CMS Approval" role="ual,approval" />
+        <menu id="tour_appr" url="/approval/" title="Tour Approval" role="ual,approval" />
+        <menu id="aulresource" url="/site_man/?cmd=resource" title="UAL Resource" role="ual,ual_resource" />
+        <menu id="giftcert" url="/bas/?cmd=giftcert" title="Gift Certificate" role="ual"/>
+        <menu id="uap_message" url="/site_man/?cmd=uap_message" title="UAP messages" role="uap"/>
+    </menu>
+    <menu id="ual_man" title="UAL Management" role="uap">
+        <menu id="site" url="/site_man/" title="Sites" role="ual,site_mngt">
+            <menu id="country" url="/site_man/?cmd=country" title="Region/Country" role="ual,site_mngt" />
+            <menu id="uap" url="/site_man/?cmd=uap_list" title="UAPs" role="ual,site_mngt" />
+            <menu id="metatag" url="/site_man/?cmd=metatag" title="Define Meta-tags" role="ual,site_mngt" />
+            <menu id="photohome" url="/site_man/?cmd=photohome" title="Home Photo" role="ual,site_mngt" />
+        </menu>
+        <menu id="user" url="/user_man/?cmd=user_list" title="User Access" role="ual,user_mngt" />
+        <menu id="aff" url="/aff_cms/" title="Affiliates" role="uap,uap_aff_mngt" />
+        <menu id="aff_banner" url="/aff_cms/?cmd=aff_banner" title="Affiliate Banners" role="ual,aff_mngt" />
+        <menu id="agent" url="/agent_cms/" title="Agents" role="uap,uap_agent_mngt" />
+        <menu id="banner" url="/site_man/?cmd=banner" title="Banner" role="ual,banner_mngt" />
+        <menu id="resource" url="/site_man/?cmd=resource_list" title="Resource" role="ual,resource" />
+        <menu id="ua_cms" url="/site_cms/?cmd=ua_home" title="UrbanAdventures.com CMS" role="ual,ual_cms">
+            <menu id="ual_home" url="/site_cms/?cmd=ua_home" title="UA.com Home Page setting" role="ual,ual_cms" />
+            <menu id="ual_hottrip" url="/site_cms/?cmd=ua_hottrip" title="Hot trips define" role="ual,ual_cms" />
+            <menu id="ual_other" url="/site_cms/?cmd=ua_other" title="Other Pages" role="ual,ual_cms" />
+            <menu id="ual_dest" url="/site_cms/?cmd=ua_dest" title="Destination Introduction page" role="ual,ual_cms" />
+            <menu id="ual_extra" url="/site_cms/?cmd=ua_extra" title="Extra pages" role="ual,ual_cms" />
+            <menu id="ual_extra" url="/site_cms/?cmd=ua_custom" title="Custom pages" role="ual,ual_cms" />
+        </menu>
+        <menu id="common" url="/site_cms/?cmd=common" title="Common Pages" role="ual" />
+        <menu id="setting" url="/site_man/?cmd=settings" title="System Settings" role="uaadmin" />
+        <menu id="redirect" url="/site_man/?cmd=redirect" title="Redirect" role="ual" />
+    </menu>
+    <menu id="misc" title="Misc">
+        <menu id="public" url="" title="Public homepage" />
+        <menu id="duplicate" url="/tour_cms/?cmd=tour_duplicate" title="Duplicate Tours"  role="admin"/>
+        <menu id="aupresource" url="/site_man/?cmd=resource&amp;uap=1" title="UAP Resource" role="uap,uap_resource" />
+        <menu id="personal_profile" url="/user_man/?cmd=user_edit" title="Update Personal Profile" />
+        <menu id="customize_corr" url="" title="Customize correspondence" role="uaadmin" />
+        <menu id="feedback_traveller" url="/feedback?cmd=traveller_feedback" title="Traveller Feedback" role="uap,feedback" />
+        <menu id="ual_message" url="/site_man?cmd=ual_message" title="View UAL messages" role="uap" />
+        <!-- <menu id="ua_link_tool" url="/site_man/?cmd=link_tool" title="UA Linking Tool" role="uap" /> -->
+        <menu id="ua_training" url="/UA-Training/customtraining.html" title="Training Courses" role="uap" target="_blank" />
+        <menu id="gen_html"   url="/gen_html/" title="Generate HTML" role="ual" />
+
+    </menu>
+</site>
